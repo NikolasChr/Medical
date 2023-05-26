@@ -1,0 +1,62 @@
+.survey-description {
+  font-size: 16px;
+}
+
+.form-section {
+  width: "100%";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  gap: 100px;
+  box-shadow: 0 0 15px 1px rgba(10, 10, 10, 0.2);
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .options-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 50px;
+
+    .option-card {
+      margin: 0 1rem;
+      flex: 1;
+      text-align: center;
+      h2 {
+        margin-bottom: 0.5rem;
+      }
+      p {
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      button {
+        color: white;
+        width: 120px;
+        height: 40px;
+        margin-bottom: 100px;
+        padding: 10px;
+        background-color: #1ab394;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
