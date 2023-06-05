@@ -1,10 +1,11 @@
-import { React, useRef, useState } from "react";
+import { React, useRef, useState, useEffect } from "react";
 import { Survey } from "survey-react-ui";
 import "./CIRS_G.scss";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
 function SurveyComponentCIRS_G(props) {
+  const [completionDate, setCompletionDate] = useState("");
   const [complete, setComplete] = useState(false);
   const { json } = props;
   const componentRefCIRS = useRef(null);
@@ -114,6 +115,11 @@ function SurveyComponentCIRS_G(props) {
     return score;
   };
 
+  useEffect(() => {
+    const currentDate = new Date().toISOString().split("T")[0];
+    setCompletionDate(currentDate);
+  })
+
   return (
     <div className="survey-container2" ref={componentRefCIRS}>
       <div className="CIRS-G">
@@ -134,7 +140,7 @@ function SurveyComponentCIRS_G(props) {
               <p>Signature:</p>
               <textarea cols="30" rows="5" />
               <p>Date of completion:</p>
-              <input type="date" />
+              <input id="completionDate" type="date"  defaultValue={completionDate} readOnly/>
             </div>
           </div>
           <h1 className="instructions">Instructions:</h1>

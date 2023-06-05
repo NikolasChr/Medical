@@ -1,10 +1,11 @@
-import { React, useRef, useState } from "react";
+import { React, useRef, useState, useEffect } from "react";
 import { Survey } from "survey-react-ui";
 import "./IADL.scss";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
 function SurveyComponentIADL(props) {
+  const [completionDate, setCompletionDate] = useState("");
   const [visible, setVisible] = useState(true);
   const { json } = props;
   const componentRefIADL = useRef(null);
@@ -36,6 +37,11 @@ function SurveyComponentIADL(props) {
     setVisible(false);
   };
 
+  useEffect(() => {
+    const currentDate = new Date().toISOString().split("T")[0];
+    setCompletionDate(currentDate);
+  })
+
   return (
     <div className="survey-container1" ref={componentRefIADL}>
       <div className="IADL">
@@ -56,7 +62,7 @@ function SurveyComponentIADL(props) {
               <p>Signature:</p>
               <textarea cols="30" rows="5" />
               <p>Date of completion:</p>
-              <input type="date" />
+              <input id="completionDate" type="date"  defaultValue={completionDate} readOnly/>
             </div>
           </div>
           <p className="desc">

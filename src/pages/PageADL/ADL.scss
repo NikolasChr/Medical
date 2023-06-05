@@ -66,6 +66,10 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 2rem;
+
+    h1 { 
+      text-align: center;
+    }
   }
 
   .bar {
@@ -152,6 +156,12 @@
   .sv_q_matrix tr td:nth-child(3):hover {
     background-color: #d5e0de;
   }
+
+  // .sv_complete_btn {
+  //   background-color: #436ac5!important;
+  //   color: white;
+  
+  // }
 
   .error-message {
     font-size: 20px;

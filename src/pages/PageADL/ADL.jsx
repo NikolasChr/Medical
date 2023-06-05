@@ -1,10 +1,12 @@
-import { React, useState, useRef } from "react";
+import { React, useState, useRef, useEffect } from "react";
 import { Survey } from "survey-react-ui";
 import "./ADL.scss";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
 function SurveyComponentADL(props) {
+
+  const [completionDate, setCompletionDate] = useState("");
   const score_dict = { P1: 1, P0: 0 };
   const { json } = props;
   const [finalscore, setFinalscore] = useState(null);
@@ -55,6 +57,11 @@ function SurveyComponentADL(props) {
     setVisible(false);
   };
 
+  useEffect(() => {
+    const currentDate = new Date().toISOString().split("T")[0];
+    setCompletionDate(currentDate);
+  })
+
   return (
     <div className="survey-container" ref={componentRefADL}>
       <div className="ADL">
@@ -75,7 +82,8 @@ function SurveyComponentADL(props) {
               <textarea cols="30" rows="5" />
               <p>Date of completion:</p>
 
-              <input id="completionDate" type="date" />
+              <input id="completionDate" type="date"  defaultValue={completionDate} readOnly/>
+              
             </div>
           </div>
 

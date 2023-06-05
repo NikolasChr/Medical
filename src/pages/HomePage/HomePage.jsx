@@ -3,6 +3,9 @@ import SurveyComponentIADL from "../PageIADL/IADL";
 import SurveyComponentADL from "../PageADL/ADL";
 import SurveyComponentCIRS_G from "../PageCIRS-G/CIRS_G";
 import "./HomePage.scss";
+import Picture1 from "../../pictures/Picture1.png"
+import Picture2 from "../../pictures/Picture2.png"
+import Picture3 from "../../pictures/Picture3.jpg"
 
 const HomePage = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -398,7 +401,21 @@ const HomePage = () => {
     <div className="form-section">
       <div className="form-container">
         {headerVisible && (
-          <h1>Please select the test(s) you wish to complete.</h1>
+          <div> 
+            <div className="logos">
+              <img src={Picture1} alt="owl"/>
+              <img src={Picture2} alt="owl"/>
+            </div>
+            <div className="title">
+            <h1>
+               A Randomized, Open-label, 
+               Phase 3 Study of Acalabrutinib in Combination with Rituximab
+               and Reduced Dose CHOP (R-miniCHOP) in Older Adults with Untreated Diffuse Large B-Cell 
+           </h1>
+           <h1>  Lymphoma Short title: ARCHED / GLA 2022-1</h1>
+            </div>
+          <h2>Please select the test(s) you wish to complete.</h2>
+          </div>
         )}
         {selectedOption ? (
           <div className="option-card">{renderSelectedOption()}</div>
@@ -426,7 +443,27 @@ const HomePage = () => {
               </button>
             </div>
           </div>
+          
         )}
+    {headerVisible && <div className="footer">
+      <div className="footerlogo"> 
+        <img src={Picture3} alt="owl"/>
+        <div className="info1">
+          <p> German Lymphoma Alliance e.V. (GLA) </p>
+          <p>Clinical Trial Center Department of Internal Medicine I</p>
+          <p>Saarland University</p>
+          <p>Building 41</p>
+          <p>D - 66421 Homburg</p>
+          </div>
+      </div>
+      <div className="info2">
+          <p>Protocol code: ARCHED / GLA 2022-1</p>
+          <p>EU CT number: 2022-501187-18-00</p>
+          <p>Tel : +49 6841 16-15014</p>
+          <p>Fax : +49 6841 16-15015</p>
+          <p>E-Mail : arched@uks.eu</p>
+      </div>
+      </div>}
       </div>
     </div>
   );
