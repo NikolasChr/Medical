@@ -410,7 +410,6 @@ const HomePage = () => {
             <h1>
               Geriatric assessment tool for the ARCHED/GLA 2022-1 Trial
            </h1>
-           {/* <h1>  Lymphoma Short title: ARCHED / GLA 2022-1</h1> */}
             </div>
           <h2>Please select the test(s) you wish to complete.</h2>
           </div>
