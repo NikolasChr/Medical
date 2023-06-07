@@ -140,7 +140,7 @@ function SurveyComponentCIRS_G(props) {
               <p>Signature:</p>
               <textarea cols="30" rows="5" />
               <p>Date of completion:</p>
-              <input id="completionDate" type="date"  defaultValue={completionDate} readOnly/>
+              <input id="completionDate" type="date" defaultValue={completionDate}/>
             </div>
           </div>
           <h1 className="instructions">Instructions:</h1>
