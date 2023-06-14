@@ -48,7 +48,7 @@ function SurveyComponentADL(props) {
       const pdf = new jsPDF({
         orientation: "portrait",
         unit: "mm",
-        format: [275, 457],
+        format: [275, 407],
       });
       pdf.addImage(imgData, "PNG", 6, 4);
       pdf.save("ADL_Form.pdf");
