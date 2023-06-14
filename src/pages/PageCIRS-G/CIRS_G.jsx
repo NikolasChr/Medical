@@ -143,9 +143,11 @@ function SurveyComponentCIRS_G(props) {
               <input id="completionDate" type="date" defaultValue={completionDate}/>
             </div>
           </div>
-          <h1 className="instructions">Instructions:</h1>
+         <div className="strategytitle">
+           <h1>Rating Strategy:</h1>
+           </div>
           <div className="strategy">
-            <h2>Rating Strategy</h2>
+         
             <br />
             <br />
             <span>0 - No problem</span>
@@ -162,6 +164,7 @@ function SurveyComponentCIRS_G(props) {
               failure / severe impairment in function
             </span>
           </div>
+          <h1 className="instructions">Instructions:</h1>
           <p className="desc">
             For each category, choose the description that best describes the
             maximum performance (Only one answer can be ticked for each
