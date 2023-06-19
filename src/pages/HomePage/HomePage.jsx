@@ -445,14 +445,15 @@ const HomePage = () => {
     {headerVisible && <div className="footer">
       <div className="footerlogo"> 
         <img src={Picture3} alt="owl"/>
-        <div className="info1">
+        </div>
+        <div className="info2">
           <p> German Lymphoma Alliance e.V. (GLA) </p>
           <p>Clinical Trial Center Department of Internal Medicine I</p>
           <p>Saarland University</p>
           <p>Building 41</p>
           <p>D - 66421 Homburg</p>
           </div>
-      </div>
+    
       <div className="info2">
           <p>Protocol code: ARCHED / GLA 2022-1</p>
           <p>EU CT number: 2022-501187-18-00</p>
