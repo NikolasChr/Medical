@@ -453,7 +453,7 @@ const HomePage = () => {
           <p>Building 41</p>
           <p>D - 66421 Homburg</p>
           </div>
-    
+ 
       <div className="info2">
           <p>Protocol code: ARCHED / GLA 2022-1</p>
           <p>EU CT number: 2022-501187-18-00</p>

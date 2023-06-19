@@ -34,11 +34,17 @@
           flex-direction: column;
           gap: 0;
         }
+
+        .logos img {
+          max-width: 100%; /* Adjust this value as needed */
+          height: auto;
+         
+        }
       h1 {
-        font-size: 18px;
+        font-size: 15px;
       }
       h2 {
-        font-size: 16px;
+        font-size: 12px;
       }
        
       }
@@ -78,7 +84,7 @@
 
     .options-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       margin-top: 50px;
       border-top: 1px solid #436ac5;
@@ -118,10 +124,30 @@
         }
       }
 
-      @media screen and (min-width: 768px) {
-        flex-direction: row;
-        justify-content: center;
-        gap: 100px;
+    
+
+      @media screen and (max-width: 768px) {
+       
+        flex-direction: column;
+          justify-content: center;
+         
+        .option-card {
+          font-size: 16px; /* Decrease the font size for smaller screens */
+        }
+        
+        .option-card h2 {
+          font-size: 15px; /* Decrease the font size for smaller screens */
+        }
+        
+        .option-card p {
+          font-size: 14px; /* Decrease the font size for smaller screens */
+        }
+        .option-card button {
+         font-size: 10px;
+    width: 90px;
+        }
+        
+       
       }
     }
   }
@@ -134,26 +160,11 @@
     padding: 30px;
     margin-top: 100px;
 
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-      text-align: center;
-  
-      .footerlogo {
-        margin-bottom: 20px;
-       align-items: center;
-       margin-left: 60px;
-      }
-  
-      .info2 {
-        margin-top: 20px;
-        align-items: center;
-      }
-    }
-  
     .footerlogo {
       display: flex;
       align-items: center;
-      margin-right: 20px;
+      gap: 20px;
+      
   
       img {
         width: 150px;
@@ -163,6 +174,26 @@
   
       
     }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+  
+      .footerlogo {
+        margin-bottom: 20px;
+       align-items: center;
+       margin-left: 60px;
+       
+      }
+  
+      .info2 {
+        font-size: 12px;
+        margin-top: 20px;
+        align-items: center;
+      }
+    }
+  
+  
   
     .info2 {
       p {
