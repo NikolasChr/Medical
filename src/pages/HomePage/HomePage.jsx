@@ -401,7 +401,7 @@ const HomePage = () => {
     <div className="form-section">
       <div className="form-container">
         {headerVisible && (
-          <div> 
+          <div className="container"> 
             <div className="logos">
               <img src={Picture1} alt="owl"/>
               <img src={Picture2} alt="owl"/>
