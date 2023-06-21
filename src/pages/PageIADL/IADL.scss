@@ -34,9 +34,10 @@
       width: 40%;
 
       textarea {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        resize: none;
+        width: 100%;
+        max-width: 200px;
+        padding: 10px;
+        resize: vertical;
       }
 
       p {
